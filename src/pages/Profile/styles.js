@@ -3,8 +3,7 @@ import { darken } from 'polished';
 
 export const Container = styled.div`
   max-width: 600px;
-  margin: 30px auto 0;
-  padding-bottom: 100px;
+  margin: 50px auto;
 
   form {
     display: flex;
@@ -68,11 +67,10 @@ export const Container = styled.div`
   }
 
   > button {
-    background: #f64c75;
     width: 100%;
-    height: 44px;
-    padding: 0 15px;
     margin: 10px 0 0;
+    height: 44px;
+    background: #f64c75;
     border: 0;
     border-radius: 4px;
     color: #fff;
