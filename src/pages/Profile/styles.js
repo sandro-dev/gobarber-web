@@ -71,7 +71,7 @@ export const Container = styled.div`
     width: 100%;
     height: 44px;
     padding: 0 15px;
-    margin: 5px 0 0;
+    margin: 10px 0 0;
     border: 0;
     border-radius: 4px;
     color: #fff;

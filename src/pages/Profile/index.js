@@ -1,16 +1,23 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-
+import { useSelector, useDispatch } from 'react-redux';
 import { Form, Input } from '@rocketseat/unform';
+import { updateProfileRequest } from '~/store/modules/user/actions';
 
 import { Container } from './styles';
 
 export default function Profile() {
+  const dispatch = useDispatch();
+
   const profile = useSelector(state => state.user.profile);
+  console.tron.log('profile log', profile);
+
+  function handleSubmit(data) {
+    dispatch(updateProfileRequest(data));
+  }
 
   return (
-    <Container initialData={profile}>
-      <Form>
+    <Container>
+      <Form initialData={profile} onSubmit={handleSubmit}>
         <Input name="name" placeholder="Seu nome completo!" />
         <Input name="email" type="email" placeholder="Seu endereço de e-mail" />
 
